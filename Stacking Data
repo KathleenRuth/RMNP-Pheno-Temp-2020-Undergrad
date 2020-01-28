@@ -17,3 +17,14 @@ package ‘neonUtilities’ successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
 	C:\Users\Katie's Computer\AppData\Local\Temp\Rtmpis6u1W\downloaded_packages
+
+update vctrs
+install.packages("vctrs")
+
+library(vctrs)
+
+library(neonUtilities)
+
+stackByTable(file.choose())
+
+Data is now unstacked in new file
