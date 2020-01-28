@@ -1,0 +1,17 @@
+Packages for working with Pheno & Temp data off NEON site
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("lubridate")
+install.packages("scales")
+install.packages("tidyr")
+install.packages("gridExtra")
+
+# set working directory to ensure R can find the file we wish to import
+getwd()
+setwd(C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno)
+
+# Read in data
+ind <- read.csv('C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividual.csv', 
+        stringsAsFactors = FALSE )
+        
+        having issues with this
