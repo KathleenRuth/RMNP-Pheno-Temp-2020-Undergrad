@@ -32,3 +32,50 @@ nrow(status_noD)
 distinct(year)       
 year_noD<-distinct(year)        
 nrow(year_noD)
+
+>  # where is there an intersection of names
+> sameName <- intersect(names(status_noD), names(ind_noD))
+>         
+> sameName       
+ [1] "namedLocation"           "domainID"                "siteID"                 
+ [4] "plotID"                  "date"                    "editedDate"             
+ [7] "individualID"            "samplingProtocolVersion" "measuredBy"             
+[10] "recordedBy"              "remarks"                 "dataQF"
+
+> # rename status editedDate
+> 
+> status_noD <- rename(status_noD, editedDateStat=editedDate, 
++         measuredByStat=measuredBy, recordedByStat=recordedBy, 
++         samplingProtocolVersionStat=samplingProtocolVersion, 
++         remarksStat=remarks, dataQFStat=dataQF)     
+>         
+> # rename year editedDate
+
+> year_noD <- rename(year_noD, editedDateYr=editedDate, 
++         measuredByYr=measuredBy, recordedByYr=recordedBy, 
++         samplingProtocolVersionYr=samplingProtocolVersion, 
++         remarksYr=remarks, dataQFYr=dataQF) 
+
+> # convert column to date class
+> 
+> ind_noD$editedDate <- as.Date(ind_noD$editedDate)
+> str(ind_noD$editedDate)        
+ Date[1:121], format: "2017-09-11" "2018-04-18" "2018-04-18" "2018-04-18" "2017-09-11" ...
+>         
+> status_noD$date <- as.Date(status_noD$date)
+> str(status_noD$date)      
+ Date[1:5058], format: "2017-07-20" "2017-07-20" "2017-07-20" "2017-07-20" "2017-07-20" ...
+>         
+> year_noD$date <- as.Date(year_noD$date)
+> str(year_noD$date)        
+ Date[1:99], format: "2018-10-03" "2018-10-03" "2018-10-03" "2018-10-03" "2018-10-03" ...
+ 
+ > # Create a new dataframe "phe_ind" with all the data from status and some from ind_lastnoD
+> phe_ind <- left_join(status_noD, ind_lastnoD)        
+Joining, by = c("namedLocation", "domainID", "siteID", "plotID", "date", "individualID")
+Error: cannot join a Date object with an object that is not a Date object???
+>         
+> ## Joining, by = c("namedLocation", "domainID", "siteID", "plotID", "individualID", "taxonID", "scientificName", "growthForm") 
+
+
+Data now cleaned up...
