@@ -1,1 +1,20 @@
+#Patterns in Phenophase
+phe_ind <- left_join(status_noD, ind_lastnoD)
 
+#data from a single site, species, and phenophase and call it phe_1sp
+
+#sites of interest
+siteOfInterest <- "RMNP"
+
+# use filter to select only the site of Interest 
+## using %in% allows one to add a vector if you want more than one site. 
+## could also do it with == instead of %in% but won't work with vectors # Create a new dataframe "phe_ind" with all the data from status and some from ind_lastnoD
+> phe_ind <- left_join(status_noD, ind_lastnoD)
+Joining, by = c("uid", "namedLocation", "domainID", "siteID", "plotID", "date", "individualID")
+Error: cannot join a Date object with an object that is not a Date object
+#must join some columns in status data
+> 
+> ## Joining, by = c("namedLocation", "domainID", "siteID", "plotID", "individualID", "growthForm")
+> phe_1sp <- filter(phe_ind, siteID %in% siteOfInterest) 
+Error in filter(phe_ind, siteID %in% siteOfInterest) : 
+  object 'phe_ind' not found
