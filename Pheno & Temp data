@@ -15,3 +15,20 @@ ind <- read.csv('C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NE
         stringsAsFactors = FALSE )
         
         having issues with this
+Clean up data
+# remove duplicates
+## expect many
+
+library(dplyr)
+
+distinct(ind)
+ind_noD <-distinct(ind)
+nrow(ind_noD)
+
+distinct(status)
+status_noD<-distinct(status)
+nrow(status_noD)
+       
+distinct(year)       
+year_noD<-distinct(year)        
+nrow(year_noD)
