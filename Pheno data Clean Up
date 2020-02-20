@@ -79,3 +79,127 @@ Error: cannot join a Date object with an object that is not a Date object???
 
 
 Data now cleaned up...
+
+#Data Clean up Take 2 from NEON github (expect repeats)
+
+* remove duplicates (full rows)
+
+* convert to date format
+
+* retain only the most recent `editedDate` in the perIndividual and status table.
+
+###Remove Duplicates
+
+The individual table (ind) file is included in each site by month-year file. As 
+
+a result when all the tables are stacked there are many duplicates. 
+
+
+
+Let's remove any duplicates that exist.
+
+
+
+```{r remove-duplicates}
+
+# drop UID as that will be unique for duplicate records
+
+ind_noUID <- select(ind, -(uid))
+
+status_noD <- select(status, -(uid))
+
+#remove duplicates
+##expect many
+
+ind_noD <- distinct(ind_lastnoD)
+nrow(ind_noD)
+
+
+
+status_noD<-distinct(status_noD)
+nrow(status_noD)
+
+### Variable Overlap between Tables
+
+# where is there an intersection of names
+
+intersect(names(status_noD), names(ind_noD))
+
+There are several fields that overlap between the datasets. Some of these are
+
+expected to be the same and will be what we join on. 
+
+
+
+However, some of these will have different values in each table. We want to keep 
+
+those distinct value and not join on them. Therefore, we can rename these 
+
+fields before joining:
+
+
+
+* date
+
+* editedDate
+
+* measuredBy
+
+* recordedBy
+
+* samplingProtocolVersion
+
+* remarks
+
+* dataQF
+
+* publicationDate
+
+
+Now we want to rename the variables that would have duplicate names. We can 
+rename all the variables in the status object to have "Stat" at the end of the 
+variable name. 
+
+# in Status table rename like columns 
+status_noD <- rename(status_noD, dateStat=date, editedDateStat=editedDate, measuredByStat=measuredBy, recordedByStat=recordedBy, samplingProtocolVersionStat=samplingProtocolVersion, remarksStat=remarks, dataQFStat=dataQF)  
+
+
+
+### Filter to last editedDate
+The individual (ind) table contains all instances that any of the location or 
+taxonomy data of an individual was updated. Therefore there are many rows for
+some individuals.  We only want the latest `editedDate` on ind.
+
+# retain only the max of the date for each individualID
+
+ind_last <- ind_noD %>%
+
+	group_by(individualID) %>%
+
+	filter(editedDate==max(editedDate))
+	
+
+# oh wait, duplicate dates, retain only the most recent editedDate
+
+ind_lastnoD <- ind_last %>%
+        group_by(editedDate, individualID) %>%
+        filter(row_number()==1)
+        
+
+### Join Dataframes
+
+Now we can join the two data frames on all the variables with the same name. 
+We use a `left_join()` from the dpylr package because we want to match all the 
+rows from the "left" (first) dateframe to any rows that also occur in the "right"
+(second) dataframe.
+
+# Create a new dataframe "phe_ind" with all the data from status and some from ind_lastnoD
+phe_ind <- left_join(status_noD, ind_lastnoD)
+Warning messages:
+1: Column `namedLocation` joining character vector and factor, coercing into character vector 
+2: Column `domainID` joining character vector and factor, coercing into character vector 
+3: Column `siteID` joining character vector and factor, coercing into character vector 
+4: Column `plotID` joining character vector and factor, coercing into character vector 
+5: Column `individualID` joining character vector and factor, coercing into character vector
+
+???WHat is going on??
