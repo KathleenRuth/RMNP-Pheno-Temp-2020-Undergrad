@@ -226,3 +226,31 @@ library(neonUtilities)
 phe_ind <- left_join(status_noD, ind_lastnoD)
 **same thing as before, but looks like data is joined> phe_ind file
 
+> View(phe_ind)
+> unique(phe_1sp$taxonID)
+Error in unique(phe_1sp$taxonID) : object 'phe_1sp' not found
+> unique(phe_ind$taxonID)
+NULL
+Warning message:
+Unknown or uninitialised column: 'taxonID'. 
+> View(ind_lastnoD)
+> View(ind_lastnoD)
+> View(ind_noD)
+> View(status)
+> View(year_noD)
+> View(ind)
+> View(ind_last)
+> View(ind)
+> View(ind_lastnoD)
+> phe_ind <- left_join(status_noD, ind)
+Joining, by = c("namedLocation", "domainID", "siteID", "plotID", "individualID")
+Warning messages:
+1: Column `namedLocation` joining character vector and factor, coercing into character vector 
+2: Column `domainID` joining character vector and factor, coercing into character vector 
+3: Column `siteID` joining character vector and factor, coercing into character vector 
+4: Column `plotID` joining character vector and factor, coercing into character vector 
+5: Column `individualID` joining character vector and factor, coercing into character vector 
+> View(phe_ind)
+> View(status)
+> View(phe_ind)
+
