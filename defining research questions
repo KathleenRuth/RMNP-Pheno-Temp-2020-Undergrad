@@ -1,0 +1,23 @@
+can address research questions now..
+
+or not taxonid didn't transfer from ind file go back to data clean up page & join ind file with status noD
+
+
+# see which species are present
+
+
+phe_ind <- left_join(status_noD, ind)-data cleanup
+
+> unique(phe_ind$taxonID)
+[1] PSME  JUCOD PICOL ABLAL PICO  POTR5
+6 Levels: ABLAL JUCOD PICO ... PSME
+
+> speciesOfInterest <- "PICO"
+> phe_ind <- filter(phe_ind, taxonID==speciesOfInterest)
+
+> # check that it worked
+> unique(phe_ind$taxonID)
+[1] PICO
+6 Levels: ABLAL JUCOD PICO ... PSME
+
+totally cleaned & specified to PICO 
