@@ -203,3 +203,26 @@ Warning messages:
 5: Column `individualID` joining character vector and factor, coercing into character vector
 
 ???WHat is going on??
+
+left off line 370 of https://github.com/mjones01/NEON-Data-Skills/blob/master/tutorials/R/NEON-pheno-temp-timeseries/01-explore-phenology-data.Rmd
+
+looks like it worked, asked NEON tutorials in github what the warning messages were & they said the join was successful
+Ack!  Two different data types.  Why?  Notice that when we checked for intersecting variable names, `data` was one of these variables. We didn't change the `data` column in the ind object from a `character` class to a date class. But, we actually don't want to combine these two `date` columns.
+Try it again.  
+We can rename the `date` column in ind so that the two dataframes can now join together.
+
+```{r join-dfs}
+
+# rename variables in ind
+
+ind_noD <- rename(ind_noD, addDate = date)
+
+library(ggplot2)
+library(dplyr)
+library(neonUtilities)
+
+# Create a new dataframe "phe_ind" with all the data from status and some from ind_lastnoD
+
+phe_ind <- left_join(status_noD, ind_lastnoD)
+**same thing as before, but looks like data is joined> phe_ind file
+
