@@ -1,0 +1,198 @@
+> YELL.Pheno <- loadByProduct(dpID="DP1.10055.001",
++                             site=c("YELL"))
+Error in loadByProduct(dpID = "DP1.10055.001", site = c("YELL")) : 
+  could not find function "loadByProduct"
+> library(neonUtilities)
+> YELL.Pheno <- loadByProduct(dpID="DP1.10055.001",
++                             site=c("YELL"))
+Continuing will download files totaling approximately 0.795896 MB. Do you want to proceed y/n: y
+Downloading 12 files
+  |============================================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=01s  
+Stacking operation across a single core.
+Stacking table phe_perindividual
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_statusintensity
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_perindividualperyear
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Copied the most recent publication of validation file to /stackedFiles
+Copied the most recent publication of variable definition file to /stackedFiles
+Finished: Stacked 3 data tables and 2 metadata tables!
+Stacking took 0.6308889 secs
+
+> View(YELL.Pheno)
+> YELL.Pheno[["phe_perindividual"]][["taxonID"]]
+  [1] "PSME"  "ARTR2" "ARTR2" "PSME"  "PSME"  "ARTR2" "ARTR2" "PSME"  "ARTR2" "PSME"  "ERUM"  "PSME"  "ERUM"  "ERUM" 
+ [15] "ERUM"  "ARTR2" "ERUM"  "ERUM"  "PSME"  "ARTR2" "PSME"  "ERUM"  "PSME"  "PSME"  "PSME"  "PSME"  "PSME"  "PSME" 
+ [29] "PSME"  "PSME"  "PSME"  "ERUM"  "PSME"  "PSME"  "ERUM"  "ARTR2" "PSME"  "ARTR2" "PSME"  "PSME"  "ARTR2" "PSME" 
+ [43] "PSME"  "PSME"  "PSME"  "ERUM"  "PSME"  "ERUM"  "ARTR2" "ERUM"  "PSME"  "PSME"  "ARTR2" "ERUM"  "PSME"  "ERUM" 
+ [57] "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ARTR2" "ARTR2" "ERUM"  "ERUM"  "PSME"  "ERUM"  "ERUM"  "ERUM" 
+ [71] "ERUM"  "ARTR2" "ERUM"  "ARTR2" "ARTR2" "ARTR2" "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ARTR2" "ARTR2" "ERUM"  "ERUM" 
+ [85] "ARTR2" "ERUM"  "ERUM"  "ERUM"  "ARTR2" "ARTR2" "ARTR2" "ERUM"  "ARTR2" "ARTR2" "ERUM"  "ARTR2" "ARTR2" "ARTR2"
+ [99] "ARTR2" "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "PSME"  "ERUM"  "ERUM"  "ERUM" 
+[113] "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "ERUM"  "PSME"  "ERUM" 
+[127] "ARTR2" "PSME"  "ARTR2" "ARTR2" "PSME"  "ERUM"  "ERUM"
+
+PSME matches w/RMNP data
+
+> MOAB.Pheno <- loadByProduct(dpID ="DP1.10055.001",
++                             site = c("MOAB"))
+Continuing will download files totaling approximately 2.842592 MB. Do you want to proceed y/n: y
+Downloading 45 files
+  |============================================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=02s  
+Stacking operation across a single core.
+Stacking table phe_perindividual
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_statusintensity
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=01s  
+Stacking table phe_perindividualperyear
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Copied the most recent publication of validation file to /stackedFiles
+Copied the most recent publication of variable definition file to /stackedFiles
+Finished: Stacked 3 data tables and 2 metadata tables!
+Stacking took 1.168243 secs
+> View(MOAB.Pheno)
+> 
+> MOAB.Pheno[["phe_perindividual"]][["taxonID"]]
+  [1] "BOGR2" "PLJA"  "BOGR2" "BOGR2" "PLJA"  "PLJA"  "BOGR2" "BOGR2" "PLJA"  "PLJA"  "BOGR2" "KRLA2" "KRLA2" "KRLA2"
+ [15] "EPVI"  "BOGR2" "BOGR2" "KRLA2" "BOGR2" "KRLA2" "KRLA2" "KRLA2" "BOGR2" "KRLA2" "KRLA2" "KRLA2" "EPVI"  "KRLA2"
+ [29] "KRLA2" "BOGR2" "BOGR2" "KRLA2" "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "KRLA2" "EPVI"  "EPVI"  "KRLA2" "KRLA2"
+ [43] "BOGR2" "BOGR2" "EPVI"  "KRLA2" "EPVI"  "EPVI"  "EPVI"  "BOGR2" "BOGR2" "BOGR2" "BOGR2" "BOGR2" "EPVI"  "EPVI" 
+ [57] "BOGR2" "KRLA2" "BOGR2" "BOGR2" "EPVI"  "KRLA2" "BOGR2" "EPVI"  "KRLA2" "EPVI"  "EPVI"  "BOGR2" "EPVI"  "KRLA2"
+ [71] "BOGR2" "EPVI"  "KRLA2" "KRLA2" "EPVI"  "BOGR2" "EPVI"  "EPVI"  "KRLA2" "EPVI"  "EPVI"  "BOGR2" "KRLA2" "BOGR2"
+ [85] "EPVI"  "KRLA2" "BOGR2" "EPVI"  "EPVI"  "BOGR2" "BOGR2" "KRLA2" "KRLA2" "KRLA2" "EPVI"  "BOGR2" "EPVI"  "BOGR2"
+ [99] "KRLA2" "BOGR2" "KRLA2" "KRLA2" "KRLA2" "BOGR2" "BOGR2" "EPVI"  "PLJA"  "PLJA"  "PLJA"  "PLJA"  "PLJA"  "EPVI" 
+[113] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[127] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[141] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[155] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[169] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[183] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[197] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI" 
+[211] "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "EPVI"  "BOGR2"
+[225] "EPVI"  "BOGR2" "KRLA2" "EPVI"  "BOGR2" "KRLA2" "EPVI"  "KRLA2" "BOGR2" "BOGR2" "KRLA2" "KRLA2" "KRLA2"
+
+no for MOAB data
+
+> NIWO.Pheno <- loadByProduct(dpID ="DP1.10055.001",
++                             site = c("NIWO"))
+Continuing will download files totaling approximately 2.046521 MB. Do you want to proceed y/n: Y
+Downloading 31 files
+  |============================================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=02s  
+Stacking operation across a single core.
+Stacking table phe_perindividual
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_statusintensity
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_perindividualperyear
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Copied the most recent publication of validation file to /stackedFiles
+Copied the most recent publication of variable definition file to /stackedFiles
+Finished: Stacked 3 data tables and 2 metadata tables!
+Stacking took 0.543834 secs
+> View(NIWO.Pheno)
+> 
+> NIWO.Pheno[["phe_perindividual"]][["taxonID"]]
+  [1] "GERO2" "GERO2" "CARU3" "GERO2" "CARU3" "GERO2" "GERO2" "CARU3" "CARU3" "GERO2" "CARU3" "GERO2" "GERO2" "CARU3"
+ [15] "ZEMA"  "CARU3" "GERO2" "MIOB2" "MIOB2" "CARU3" "CARU3" "GERO2" "CARU3" "GERO2" "GERO2" "GERO2" "CARU3" "GERO2"
+ [29] "MIOB2" "MIOB2" "GERO2" "MIOB2" "GERO2" "GERO2" "CARU3" "CARU3" "GERO2" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3"
+ [43] "CARU3" "MIOB2" "GERO2" "MIOB2" "GERO2" "CARU3" "GERO2" "CARU3" "MIOB2" "CARU3" "GERO2" "GERO2" "MIOB2" "MIOB2"
+ [57] "CARU3" "GERO2" "CARU3" "GERO2" "CARU3" "CARU3" "MIOB2" "CARU3" "GERO2" "MIOB2" "MIOB2" "GERO2" "MIOB2" "GERO2"
+ [71] "MIOB2" "MIOB2" "GERO2" "MIOB2" "CARU3" "GERO2" "CARU3" "GERO2" "GERO2" "CARU3" "GERO2" "GERO2" "MIOB2" "GERO2"
+ [85] "MIOB2" "CARU3" "CARU3" "CARU3" "GERO2" "MIOB2" "MIOB2" "MIOB2" "MIOB2" "GERO2" "CARU3" "MIOB2" "MIOB2" "GERO2"
+ [99] "GERO2" "CARU3" "MIOB2" "CARU3" "GERO2" "GERO2" "MIOB2" "MIOB2" "CARU3" "GERO2" "GERO2" "CARU3" "MIOB2" "CARU3"
+[113] "CARU3" "MIOB2" "MIOB2" "GERO2" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3" "CARU3"
+[127] "CARU3" "CARU3" "GERO2" "GERO2" "GERO2" "MIOB2" "MIOB2" "GERO2" "CARU3" "CARU3" "MIOB2" "MIOB2" "GERO2" "GERO2"
+[141] "CARU3" "MIOB2" "GERO2" "MIOB2" "GERO2" "MIOB2" "GERO2" "CARU3" "GERO2" "CARU3" "CARU3" "MIOB2" "GERO2" "CARU3"
+[155] "MIOB2" "CARU3" "MIOB2" "GERO2" "CARU3" "CARU3" "CARU3" "GERO2" "MIOB2" "CARU3" "CARU3" "GERO2" "MIOB2" "CARU3"
+[169] "CARU3" "MIOB2" "CARU3" "MIOB2" "GERO2" "GERO2" "GERO2" "CARU3" "CARU3" "MIOB2" "MIOB2" "GERO2" "GERO2" "GERO2"
+[183] "GERO2" "MIOB2" "CARU3" "MIOB2" "CARU3" "MIOB2" "GERO2" "GERO2" "GERO2" "CARU3" "MIOB2" "GERO2" "MIOB2" "MIOB2"
+[197] "GERO2" "CARU3" "CARU3" "GERO2" "CARU3" "CARU3" "CARU3" "MIOB2" "CARU3" "GERO2" "CARU3" "CARU3" "MIOB2" "GERO2"
+[211] "GERO2" "MIOB2" "MIOB2" "MIOB2" "CARU3" "MIOB2" "GERO2" "MIOB2" "MIOB2" "CARUD" "MIOB2" "GEROT" "MIOB2" "MIOB2"
+[225] "MIOB2" "CARUD" "CARUD" "GEROT" "GEROT" "CARUD" "GEROT" "GEROT" "CARUD" "MIOB2" "MIOB2" "GERO2" "CARUD" "CARUD"
+[239] "GEROT" "GEROT" "CARUD" "CARUD" "MIOB2" "CARUD" "GEROT" "GEROT" "CARUD" "GEROT" "GEROT" "GEROT" "CARUD" "GERO2"
+[253] "GERO2" "CARUD" "GEROT" "GEROT" "GEROT" "MIOB2" "MIOB2" "CARUD" "CARUD" "CARUD" "GEROT" "MIOB2" "MIOB2" "MIOB2"
+[267] "GEROT" "CARUD" "CARUD" "CARUD" "MIOB2" "CARUD" "CARUD" "MIOB2" "GEROT" "CARUD" "MIOB2" "MIOB2" "GEROT" "MIOB2"
+[281] "MIOB2" "CARUD" "MIOB2" "CARUD" "CARUD" "GEROT" "MIOB2" "GEROT" "GEROT" "MIOB2" "GEROT" "CARUD" "GEROT" "MIOB2"
+[295] "MIOB2" "MIOB2" "CARUD" "MIOB2" "GEROT" "CARUD" "CARUD" "GEROT" "GEROT" "MIOB2" "CARU3" "MIOB2" "MIOB2" "GERO2"
+[309] "GERO2" "CARU3" "GERO2" "GERO2" "MIOB2" "GERO2" "MIOB2" "CARU3" "CARU3" "GERO2" "MIOB2" "GERO2" "MIOB2" "MIOB2"
+[323] "MIOB2" "CARU3" "MIOB2" "GERO2" "CARU3" "GERO2" "CARU3" "MIOB2" "CARU3" "MIOB2" "CARU3" "GERO2" "MIOB2" "CARU3"
+[337] "MIOB2" "CARU3" "GERO2" "MIOB2" "CARU3" "CARU3" "GERO2" "GERO2" "MIOB2" "GERO2" "MIOB2" "GERO2" "CARU3" "CARU3"
+[351] "MIOB2" "MIOB2" "CARU3" "MIOB2" "CARU3" "GERO2" "GERO2" "CARU3" "GERO2" "CARU3" "MIOB2" "MIOB2" "GERO2" "MIOB2"
+[365] "MIOB2" "GERO2" "GERO2" "MIOB2" "CARU3" "MIOB2" "GERO2" "GERO2" "GERO2" "GERO2" "GERO2" "CARU3" "CARU3" "CARU3"
+[379] "MIOB2" "CARU3" "GERO2" "CARU3" "CARU3" "MIOB2" "GERO2" "CARU3" "CARU3" "GERO2" "MIOB2" "GERO2" "MIOB2" "GERO2"
+[393] "CARU3" "CARU3" "GERO2" "CARUD" "GEROT" "CARUD" "GEROT" "MIOB2" "GEROT" "CARUD" "MIOB2" "GEROT" "CARUD" "GEROT"
+[407] "GEROT" "CARUD" "GEROT" "CARUD" "CARUD" "MIOB2" "CARUD" "MIOB2" "MIOB2" "MIOB2" "MIOB2" "GEROT" "GEROT" "MIOB2"
+
+compare to
+> RMNP.Pheno <- loadByProduct(dpID ="DP1.10055.001",
++                             site = c("RMNP"))
+Continuing will download files totaling approximately 0.649946 MB. Do you want to proceed y/n: y
+Downloading 16 files
+  |============================================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=01s  
+Stacking operation across a single core.
+Stacking table phe_perindividual
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_statusintensity
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking table phe_perindividualperyear
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Copied the most recent publication of validation file to /stackedFiles
+Copied the most recent publication of variable definition file to /stackedFiles
+Finished: Stacked 3 data tables and 2 metadata tables!
+Stacking took 0.2807691 secs
+> View(RMNP.Pheno)
+> RMNP.Pheno[["phe_perindividual"]][["taxonID"]]
+  [1] "PSME"  "PSME"  "PICO"  "PICO"  "PSME"  "PICO"  "PSME"  "PSME"  "PICO"  "PSME"  "PICO"  "PSME"  "PSME"  "PSME" 
+ [15] "PSME"  "PSME"  "PICOL" "PICOL" "PICOL" "POTR5" "PICOL" "PICOL" "POTR5" "POTR5" "PICOL" "PICOL" "PICOL" "ABLAL"
+ [29] "PICOL" "PICOL" "PICOL" "PICOL" "ABLAL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "PICOL" "PICOL"
+ [43] "PICOL" "ABLAL" "PICOL" "PICOL" "PICOL" "PICOL" "PICOL" "PICOL" "PICOL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "PICOL"
+ [57] "PICOL" "PICOL" "ABLAL" "PICOL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "ABLAL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "ABLAL"
+ [71] "ABLAL" "ABLAL" "ABLAL" "ABLAL" "PICOL" "ABLAL" "PICOL" "ABLAL" "ABLAL" "ABLAL" "ABLAL" "ABLAL" "ABLAL" "JUCOD"
+ [85] "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD"
+ [99] "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD"
+[113] "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "JUCOD" "PICOL" "PICOL"
+
+elevation data...
+> YELL.Pheno[["phe_perindividual"]][["elevation"]]
+  [1] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [17] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [33] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [49] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [65] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [81] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+ [97] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4
+[113] 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2089.4 2128.2 2128.2 2128.2 2128.2
+[129] 2128.2 2128.2 2128.2 2128.2 2128.2
+
+RMNP data avg around 2795.7 elevation ~700ft difference..look at latitude differences..
+
+> YELL.Pheno[["phe_perindividual"]][["decimalLatitude"]]
+  [1] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [13] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [25] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [37] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [49] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [61] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [73] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [85] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+ [97] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+[109] 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249 44.96249
+[121] 44.96249 44.96249 44.96249 44.96249 44.95469 44.95469 44.95469 44.95469 44.95469 44.95469 44.95469 44.95469
+[133] 44.95469
+
+RMNP latitiude range 40.27672...40.18769
+
+
