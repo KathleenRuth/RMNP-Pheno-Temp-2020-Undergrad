@@ -1,1 +1,168 @@
+> library(neonUtilities)
+> library(dplyr)
 
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> library(ggplot2)
+> library(dplyr)
+> library(lubridate)
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date
+
+> library(lubridate)
+> setwd(C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL)
+Error: unexpected '/' in "setwd(C:/"
+> setwd"(C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL)"
+Error: unexpected string constant in "setwd"(C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL)""
+> setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL")
+
+> #Reformat environment file into local file
+> 		
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_perindividual.csv"
+> 
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_statusintensity.csv"
+>           
+>           
+> stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant YELL.zip"")          
+Error: unexpected symbol in "stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant YELL.zip"
+> ind <- read.csv(""C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL.pheno"")      
+Error: unexpected symbol in "ind <- read.csv(""C"
+> 
+> year <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividualperyear.csv",)        
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividualperyear.csv': No such file or directory
+> 
+> status <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividual.csv",)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividual.csv': No such file or directory
+> 
+> ind <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv', 
++ 
++ 		stringsAsFactors = FALSE )
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv': No such file or directory
+> 
+> 
+> 
+> status <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv', 
++ 
++ 		stringsAsFactors = FALSE)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv': No such file or directory
+> 		
+> setwd("Global Environemnt")
+Error in setwd("Global Environemnt") : cannot change working directory
+> 
+> #Reformat environment file into local file
+> 		
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_perindividual.csv"
+> 
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_statusintensity.csv"
+>           
+>           
+> stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant YELL.zip"")          
+Error: unexpected symbol in "stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant YELL.zip"
+> ind <- read.csv(""C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL.pheno"")      
+Error: unexpected symbol in "ind <- read.csv(""C"
+> 
+> year <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividualperyear.csv",)        
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividualperyear.csv': No such file or directory
+> 
+> status <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividual.csv",)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant YELL/stackedFiles-pheno/phe_perindividual.csv': No such file or directory
+> 
+> ind <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv', 
++ 
++ 		stringsAsFactors = FALSE )
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv': No such file or directory
+> 
+> 
+> 
+> status <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv', 
++ 
++ 		stringsAsFactors = FALSE)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv': No such file or directory
+> 		
+> setwd("Global Environemnt")
+Error in setwd("Global Environemnt") : cannot change working directory
+> 
+> #Reformat environment file into local file
+> 		
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_perindividual.csv"
+> 
+> write.csv("YELL Pheno, 
++ 
++           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","YELL Pheno, 
+
+          ~/Downloads/phe_statusintensity.csv"
+>           
+>           
+> stackByTable(filepath="~Documents/School/Research/NEON_obs-phenology-plant YELL.zip")          
+Error in utils::unzip(zipfile = zippath, list = T) : 
+  zip file '~Documents/School/Research/NEON_obs-phenology-plant YELL.zip' cannot be opened
+  
+  ***can't get YELL Pheno data from global environment into usable tables...maybe I separate the tables with the global environment... 
