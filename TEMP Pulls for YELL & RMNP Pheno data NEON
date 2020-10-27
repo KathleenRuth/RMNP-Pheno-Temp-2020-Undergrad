@@ -1,1 +1,25 @@
+TEMP Pulls for YELL & RMNP Pheno data NEON
 
+YELL.Temp <- loadByProduct(dpID="DP1.00002.001",
+                            site=c("YELL"))
+y
+library(neonUtilities)
+RMNP.Temp <- loadByProduct(dpID="DP1.00003.001",
+                           site=c("RMNP"))
+                           
+  What happens:                   
+                                                    Downloading 70 files
+  |==============================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=15s  
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking operation across a single core.
+Stacking table TAAT_1min
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=21s  
+Stacking table TAAT_30min                                                                                                            
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=02s  
+Merged the most recent publication of sensor position files for each site and saved to /stackedFiles
+Copied the most recent publication of variable definition file to /stackedFiles
+Finished: Stacked 2 data tables and 2 metadata tables!
+Stacking took 50.01444 secs
