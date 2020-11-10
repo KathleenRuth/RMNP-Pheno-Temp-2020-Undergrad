@@ -1,1 +1,58 @@
+YELL.Temp <- loadByProduct(dpID="DP1.00002.001",
+                            site=c("YELL"))
+y
+library(neonUtilities)
+RMNP.Temp <- loadByProduct(dpID="DP1.00003.001",
+                           site=c("RMNP"))
+
+WORKING WITH STACKED NEON TEMP DATA -YELL & RMNP
+
+### Install R Packages
+
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("scales")
+install.packages("tidyr")
+***issues with tidyr package, having to restart RStudio may need to update or find something else to use in place of tidyr...
+install.packages("lubridate")
+
+library(neonUtilities)
+
+RMNP.Temp1 <- loadByProduct(dpID="DP1.00002.001",
+                            site=c("RMNP"))
+quality flags
+> ```{r qf-data}
+> finalQf
+Error: object 'finalQf' not found
+> sum(YELL.Pheno$finalQF)
+[1] 0
+> sum(RMNP.Temp1$finalQf)
+[1] 0
+
+What about null (`NA`) data? 
+  ```{r na-data}
+# Are there NA's in your data? Count 'em up
+> sum(is.na(RMNP.Temp1$tempSignleMean))
+[1] 0
+> # Are there NA's in your data? Count 'em up
+> sum(is.na(YELL.Temp$tempSingleMean))
+[1] 0
+
+na.rm=TRUE 
+  **tells R to ignore n/a values when making calculations
+
+# create new dataframe without NAs
+YELL.Temp_noNA <- YELL.Temp 
+  drop_na(tempSingleMean)  # tidyr function
+RMNP.Temp_noNA <- RMNP.Temp1
+  drop_NA(tempSingleMean)
+  
+  > sum(is.na(YELL.Temp_noNA$tempSingleMean))
+[1] 0
+> sum(is.na(RMNP.Temp1_noNA$tempSingleMean))
+Error: object 'RMNP.Temp1_noNA' not found
+> sum(is.na(RMNP.Temp_noNA$tempSingleMean))
+[1] 0
+
+yay it worked
 
