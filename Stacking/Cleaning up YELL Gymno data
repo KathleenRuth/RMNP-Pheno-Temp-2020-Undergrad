@@ -322,3 +322,330 @@ Joining, by = c("uid", "namedLocation", "domainID", "siteID", "plotID", "date", 
 Error: cannot join a Date object with an object that is not a Date object
 
 ...looking back at first pheno clean up of RMNP to see how this was resolved 
+
+RMNP Data
+
+library(neonUtilities)
+library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+  
+  filter, lag
+
+The following objects are masked from ‘package:base’:
+  
+  intersect, setdiff, setequal, union
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+  
+  date
+
+library(lubridate)
+setwd(C:/Users/Katie's Computer/OneDrive/Documents/School/Research Take 2/Loading-cleaning pheno data)
+Error: unexpected '/' in "setwd(C:/"
+setwd"(C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant)"
+Error: unexpected string constant in "setwd"(C:/Users/Katie's Computer/OneDrive/Documents/School/Research Take 2/Loading-cleaning pheno data)"
+setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research Take 2/Loading-cleaning pheno data")
+
+> #Reformat environment file into local file
+> 		
+write.csv("RMNP Pheno, 
++ 
++           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","RMNP Pheno, 
+
+          ~/Downloads/phe_perindividual.csv"
+> 
+write.csv("RMNP Pheno, 
++ 
++           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","RMNP Pheno, 
+
+          ~/Downloads/phe_statusintensity.csv"
+>           
+>           
+stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant.zip"")          
+Error: unexpected symbol in "stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant.zip"
+ind <- read.csv(""C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant.pheno"")      
+Error: unexpected symbol in "ind <- read.csv(""C"
+> 
+  year <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividualperyear.csv",)        
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+  In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividualperyear.csv': No such file or directory
+> 
+status <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividual.csv",)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividual.csv': No such file or directory
+> 
+> ind <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv', 
++ 
++ 		stringsAsFactors = FALSE )
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv': No such file or directory
+> 
+> 
+> 
+> status <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv', 
++ 
++ 		stringsAsFactors = FALSE)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv': No such file or directory
+> 		
+setwd("Global Environemnt")
+Error in setwd("Global Environemnt") : cannot change working directory
+> 
+> #Reformat environment file into local file
+> 		
+write.csv("RMNP Pheno, 
++ 
+  +           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","RMNP Pheno, 
+
+~/Downloads/phe_perindividual.csv"
+> 
+write.csv("RMNP Pheno, 
++ 
+  +           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","RMNP Pheno, 
+
+~/Downloads/phe_statusintensity.csv"
+>           
+>           
+stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant.zip"")          
+Error: unexpected symbol in "stackByTable(filepath=""~Documents/School/Research/NEON_obs-phenology-plant.zip"
+ind <- read.csv(""C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant.pheno"")      
+Error: unexpected symbol in "ind <- read.csv(""C"
+> 
+year <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividualperyear.csv",)        
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividualperyear.csv': No such file or directory
+                                             
+                                             status <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividual.csv",)
+                                             Error in file(file, "rt") : cannot open the connection
+                                             In addition: Warning message:
+                                               In file(file, "rt") :
+                                               cannot open file 'C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles-pheno/phe_perindividual.csv': No such file or directory
+
+ind <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv', 
++ 
++ 		stringsAsFactors = FALSE )
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_perindividual.csv': No such file or directory
+> 
+> 
+> 
+status <- read.csv('NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv', 
++ 
++ 		stringsAsFactors = FALSE)
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'NEON-pheno-temp-timeseries/pheno/phe_statusintensity.csv': No such file or directory
+> 		
+setwd("Global Environemnt")
+Error in setwd("Global Environemnt") : cannot change working directory
+> 
+> #Reformat environment file into local file
+> 		
+write.csv("RMNP Pheno, 
++ 
++           ~/Downloads/phe_perindividual.csv")
+"","x"
+"1","RMNP Pheno, 
+
+          ~/Downloads/phe_perindividual.csv"
+> 
+write.csv("RMNP Pheno, 
++ 
++           ~/Downloads/phe_statusintensity.csv")		
+"","x"
+"1","RMNP Pheno, 
+
+          ~/Downloads/phe_statusintensity.csv"
+>           
+>           
+stackByTable(filepath="~Documents/School/Research/NEON_obs-phenology-plant.zip")          
+Error in utils::unzip(zipfile = zippath, list = T) : 
+  zip file '~Documents/School/Research/NEON_obs-phenology-plant.zip' cannot be opened
+  
+  ***can't get RMNP Pheno data from global environment into usable tables...maybe I separate the tables with the global environment... 
+                                             
+                                             
+                                             >           
+                                               >           
+                                               stackByTable(filepath="~Documents/School/Research/NEON_obs-phenology-plant.zip")          
+                                             Error in utils::unzip(zipfile = zippath, list = T) : 
+                                               zip file '~Documents/School/Research/NEON_obs-phenology-plant.zip' cannot be opened
+                                             
+                                             library(neonUtilities)          
+                                             library(ggplot2)         
+                                             library(dplyr)          
+                                             
+                                             setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON-obs-phenology-plant/stackedFiles")         
+                                             Error in setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON-obs-phenology-plant/stackedFiles") : 
+                                               cannot change working directory
+                                             
+                                             stackByTable(filepath="C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant.zip")          
+                                             Unpacking zip files using 1 cores.
+                                             |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=02s  
+                                             Stacking operation across a single core.
+                                             Stacking table phe_perindividual
+                                             |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+                                             Stacking table phe_statusintensity
+                                             |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+                                             Stacking table phe_perindividualperyear
+                                             |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+                                             Copied the most recent publication of validation file to /stackedFiles
+                                             Copied the most recent publication of variable definition file to /stackedFiles
+                                             Finished: Stacked 3 data tables and 2 metadata tables!
+                                               Stacking took 0.664227 secs
+                                             All unzipped monthly data folders have been removed.
+                                             >           
+                                               library(lubridate)
+                                             >   
+                                               setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON-obs-phenology-plant/stackedFiles")
+                                             Error in setwd("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON-obs-phenology-plant/stackedFiles") : 
+                                               cannot change working directory
+                                             > 
+                                               indRMNP <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles/phe_perindividualRMNP.csv")
+                                             > 
+                                               > 
+                                               > 
+                                               statusRMNP <- read.csv("C:/Users/Katie's Computer/OneDrive/Documents/School/Research/NEON_obs-phenology-plant/stackedFiles/phe_statusintensityRMNP.csv")          
+                                             View(status)
+                                             
+                                             ###yayit worked!!! the magic of trying different combos of symbols
+                                             
+                                             > ##CLEANING up DATA!!!!
+                                               >     #remove duplicate, conver date, retain latest editedDae in perInd table
+                                               >     
+                                               > #remove duplicates
+                                               > 
+                                               ind_noYRMNP<- distinct(ind)
+                                             nrow(ind_noYRMNP)
+                                             [1] 133
+                                             
+                                             status_noYRMNP<-distinct(status)
+                                             nrow(status_noYRMNP)
+                                             [1] 16961
+                                             >           
+                                               > #Variable name overlap btwn Tables
+                                               > 
+                                               >  #what are these names?
+                                               >  
+                                               sameName <- intersect(names(status_noYRMNP),names(ind_noYRMNP))
+                                             >           
+                                               > 
+                                               > #There are several fields that overlap between the datasets. Some of these are
+                                               > #expected to be the same and will be what we join on. 
+                                               > 
+                                               > 
+                                               > 
+                                               > #However, some of these will have different values in each table. We want to keep
+                                               > #those distinct value and not join on the          
+                                               >           
+                                               > We want to rename common fields before joining:
+                                               Error: unexpected symbol in "We want"
+                                             > 
+                                               * editedDate
+                                             Error: unexpected '*' in "*"
+                                             * measuredBy
+                                             Error: unexpected '*' in "*"
+                                             * recordedBy
+                                             Error: unexpected '*' in "*"
+                                             > * samplingProtocolVersion
+                                             Error: unexpected '*' in "*"
+                                             > * remarks
+                                             Error: unexpected '*' in "*"
+                                             > * dataQF
+                                             Error: unexpected '*' in "*"
+                                             > 
+                                               > Now we want to rename the variables that would have duplicate names. We can 
+                                             Error: unexpected symbol in "Now we"
+                                             > rename all the variables in the status object to have "Stat" at the end of the 
+                                             Error: unexpected symbol in "rename all"
+                                             > variable name          
+                                             Error: unexpected symbol in "variable name"
+                                             >           
+                                               > 
+                                               > # rename status editedDate
+                                               > 
+                                               status_noYRMNP <- rename(status_noYRMNP, editedDateStat=editedDate,
+                                                                    + 		measuredByStat=measuredBy, recordedByStat=recordedBy,
+                                                                    + 		samplingProtocolVersionStat=samplingProtocolVersion,
+                                                                    + 		remarksStat=remarks, dataQFStat=dataQF)          
+                                             >           
+                                               > ### Convert to Date
+                                               > 
+                                               > Our `addDate` and `date` columns are stored as a `character` class. We need to 
+                                             Error: unexpected symbol in "Our `addDate`"
+                                             > convert it to a date class. The `as.Date()` function in base R will do this.          
+                                             Error: unexpected symbol in "convert it"
+                                             >           
+                                               > # convert column to date class
+                                               ind_noYRMNP$editedDate <- as.Date(ind_noYRMNP$editedDate)
+                                             str(ind_noYRMNP$editedDate)          
+                                             Date[1:133], format: "2018-08-02" "2018-08-02" "2018-08-02" ...
+                                             >           
+                                               status_noYRMNP$date <- as.Date(status_noYRMNP$date)
+                                             str(status_noYRMNP$date)          
+                                             Date[1:16961], format: "2018-08-29" "2018-08-29" "2018-08-29" ...
+                                             View(status_noYRMNP)
+                                             
+                                             ind_lastYRMNP <- ind_noYRMNP %>%
+                                               group_by(individualID) %>%
+                                               filter(editedDate==max(editedDate))
+                                             
+                                             
+                                             
+                                             # oh wait, duplicate dates, retain only one
+                                             
+                                             ind_lastnoYRMNP <- ind_lastYRMNP %>%
+                                               group_by(editedDate, individualID) %>%
+                                               filter(row_number()==1)         
+                                             
+                                             ##can see in global environment # of obs decreasing as data associated with 1 ind combines
+                                             
+                                             # Create a new dataframe "phe_indY" with all the data from status and some from ind_lastnoY
+                                             phe_indYRMNP <- left_join(status_noYRMNP, ind_lastnoYRMNP)
+                                             Joining, by = c("uid", "namedLocation", "domainID", "siteID", "plotID", "date", "individualID", "publicationDate")
+                                             Error: cannot join a Date object with an object that is not a Date object
+                                             
+                                             > #Ack!  Two different data types.  Why?  Notice that when we checked for intersecting variable names, `data` was one of these variables. We didn't change the `data` column in the ind object from a `character` class to a date class. But, we actually don't want to combine these two `date` columns.
+                                               > We can rename the `date` column in ind so that the two dataframes can now join together.
+                                             Error: unexpected symbol in "We can"
+                                             > 
+                                               > # rename variables in ind
+                                               > 
+                                               ind_noYRMNP <- rename(ind_noYRMNP, addDate = date)
+                                             > 
+                                               > # Create a new dataframe "phe_indY" with all the data from status and some from ind_lastnoY
+                                               phe_indYRMNP <- left_join(status_noYRMNP, ind_lastnoYRMNP)
+                                             Joining, by = c("uid", "namedLocation", "domainID", "siteID", "plotID", "date", "individualID", "publicationDate")
+                                             Error: cannot join a Date object with an object that is not a Date object
+                                             
+                                             ...looking back at first pheno clean up of RMNP to see how this was resolved
