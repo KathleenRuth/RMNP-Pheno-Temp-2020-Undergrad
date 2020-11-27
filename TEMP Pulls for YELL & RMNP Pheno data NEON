@@ -56,3 +56,22 @@ Error: object 'RMNP.Temp1_noNA' not found
 
 yay it worked
 
+> RMNP.Temp1 <- loadByProduct(dpID="DP1.00002.001",
++                             site=c("RMNP"))
+Finding available files
+  |==============================================================================================| 100%
+
+Continuing will download files totaling approximately 217.878306 MB. Do you want to proceed y/n: y
+Downloading 71 files
+  |==============================================================================================| 100%
+
+Unpacking zip files using 1 cores.
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=24s  
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=00s  
+Stacking operation across a single core.
+Stacking table SAAT_1min
+  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=42s  
+Error: cannot allocate vector of size 157 Kb
+Error during wrapup: cannot allocate vector of size 210.4 Mb
+
+***not enough storage available in R with my comp-need to run it in separate groups. YELL & RMNP
